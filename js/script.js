@@ -22,6 +22,9 @@ function guardarDatos(productoName,cantidadProducto,precioProducto){
 
     // luego de ingresar el producto se limpia el formulario 
     limpiarForm();
+
+    let nombreGato = localStorage.getItem('miGato');
+    let nombrePerro = localStorage.getItem('miPerro');
 }
 
 // borra un producto 
