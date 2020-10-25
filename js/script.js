@@ -8,23 +8,33 @@ let productoArray = [];
 // con esta funcion guardamos los datos ingresados 
 function guardarDatos(productoName,cantidadProducto,precioProducto){
 
+    // creo un array de producto 
     const producto ={
         nombreProducto: productoName,
         cantidad: cantidadProducto,
         precio: precioProducto
     }
 
-    // le pusheo el objeto al array 
-    productoArray.push(producto);
 
-    // convierto el objeto en un string con el metodo JSON y lo inserto en el localStorage
-    localStorage.setItem('producto',JSON.stringify(productoArray));
+    // toma los datos de producto y los guarda en existentes
+    let existentes = JSON.parse(localStorage.getItem("producto"));
 
+    // si existente tiene datos le pushea lo que hay en producto 
+    if(existentes!==null){
+        existentes.push(producto);
+        // guarda en el localStorage en la key producto lo que hay en existente 
+        localStorage.setItem('producto',JSON.stringify(existentes));
+    }else{
+        // si existente esta vacio, se le pushea lo que hay en producto al array 
+        productoArray.push(producto);
+        // se guarda en el localStorage en la key producto lo que hay en el array 
+        localStorage.setItem('producto',JSON.stringify(productoArray));
+    }
+ 
+    
     // luego de ingresar el producto se limpia el formulario 
     limpiarForm();
 
-    let nombreGato = localStorage.getItem('miGato');
-    let nombrePerro = localStorage.getItem('miPerro');
 }
 
 // borra un producto 
@@ -33,7 +43,7 @@ function borrarProducto(){
 }
 
 
-// limpiar form de ingreso
+// limpiar formulario de ingreso
 function limpiarForm(){
     productoItem.value = "";
     cantidadItem.value = "";
