@@ -67,3 +67,5 @@ function tomarDatos(){
 }
 
 btn_guardar.addEventListener("click",tomarDatos);
+
+  
