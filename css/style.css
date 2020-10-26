@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#contenedorMostrar{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+#span_mostrarProducto{
+    flex: 1 1 auto;
+}
+
+#span_cantidadProducto{
+    flex: 1 1 auto;
+}
+
+#span_precioProducto{
+    flex: 1 1 auto;
+}

@@ -17,9 +17,9 @@ function mostrarProductos(){
 
     // muestro todos los nombres de los productos cargados 
     for (const index in productosCargados){
-        span_mostrarProducto.innerHTML += `<li>${productosCargados[index].nombreProducto}</li>`;
-        span_mostrarCantidad.innerHTML += `<li>${productosCargados[index].cantidad}</li>`;
-        span_precioProducto.innerHTML += `<li>${productosCargados[index].precio}</li>`;            
+        span_mostrarProducto.innerHTML += `<br><span>${productosCargados[index].nombreProducto}</span>`;
+        span_mostrarCantidad.innerHTML += `<br><span>${productosCargados[index].cantidad}</span>`;
+        span_precioProducto.innerHTML += `<br><span>${productosCargados[index].precio}</span>`;            
     }
 
 
