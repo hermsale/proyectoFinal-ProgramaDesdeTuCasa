@@ -8,17 +8,28 @@
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    
+    margin: auto;
+    justify-content: center;
 }
 
 #span_mostrarProducto{
     flex: 1 1 auto;
+    text-align: center;
 }
 
 #span_cantidadProducto{
     flex: 1 1 auto;
+    text-align: center;
 }
 
 #span_precioProducto{
     flex: 1 1 auto;
+    text-align: center;
 }
+
+.div_lista{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
