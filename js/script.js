@@ -18,7 +18,8 @@ function guardarDatos(productoName,cantidadProducto,precioProducto){
 
     // toma los datos de producto y los guarda en existentes
     let existentes = JSON.parse(localStorage.getItem("producto"));
-
+    
+   
     // si existente tiene datos le pushea lo que hay en producto 
     if(existentes!==null){
         existentes.push(producto);
@@ -66,6 +67,26 @@ function tomarDatos(){
     guardarDatos(productoName,cantidadProducto,precioProducto);
 }
 
-btn_guardar.addEventListener("click",tomarDatos);
+// btn_guardar.addEventListener("click",tomarDatos);
+btn_guardar.addEventListener("click",revisionStock);
 
+// esta funcion es un filtro para no generar productos repetidos en el inventario 
+function revisionStock(){
+    let revision = JSON.parse(localStorage.getItem("producto"));
+    
+    // comparo si ya existe el producto o no en el inventario almacenado 
+    for (const i in revision) {
+        if(productoItem.value===revision[i].nombreProducto){
+            // console.log("Ya existe el producto");
+            alert("El producto que desea ingresar ya se encuentra inventariado");
+            return;
+        }else{
+            console.log("Se puede agregar este producto");
+            tomarDatos();
+            return;
+        }
+       
+    }
+    
+}
   

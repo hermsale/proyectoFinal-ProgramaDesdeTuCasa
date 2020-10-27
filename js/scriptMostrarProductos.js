@@ -15,7 +15,7 @@ function mostrarProductos(){
     // console.log("entre");
     let productosCargados = JSON.parse(localStorage.getItem("producto"));
 
-    // muestro todos los nombres de los productos cargados 
+     // muestro todos los nombres de los productos cargados 
     for (const index in productosCargados){
         span_mostrarProducto.innerHTML += `<br><span>${productosCargados[index].nombreProducto}</span>`;
         span_mostrarCantidad.innerHTML += `<br><span>${productosCargados[index].cantidad}</span>`;
