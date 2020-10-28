@@ -75,18 +75,31 @@ function revisionStock(){
     let revision = JSON.parse(localStorage.getItem("producto"));
     
     // comparo si ya existe el producto o no en el inventario almacenado 
+    let contador=0;
     for (const i in revision) {
         if(productoItem.value===revision[i].nombreProducto){
-            // console.log("Ya existe el producto");
-            alert("El producto que desea ingresar ya se encuentra inventariado");
-            return;
-        }else{
-            console.log("Se puede agregar este producto");
-            tomarDatos();
-            return;
+            alert("El producto que esta deseando ingresar ya se encuentra en el inventario");
+            contador++;
         }
-       
     }
+
+    console.log(contador);
+    // si el contador se mantiene en 0 es porque no hay ningun producto repetido 
+    if(contador===0){
+        console.log("puede ingresar este producto");
+        tomarDatos();
+    }
+  
+  
+    /////////////// probando si toma el metodo every para buscar coincidencias en el array - sin resultado
+    // function repasoInventario(esta){
+    //     return esta === "manteca";
+    // }
+
+    // const inventario = (valor) => valor === "manteca";
+
+    // console.log(revision.nombreProducto.every(inventario));
+
+    
     
 }
-  
