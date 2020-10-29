@@ -98,8 +98,5 @@ function revisionStock(){
 
     // const inventario = (valor) => valor === "manteca";
 
-    // console.log(revision.nombreProducto.every(inventario));
-
-    
-    
+    // console.log(revision.nombreProducto.every(inventario));   
 }
