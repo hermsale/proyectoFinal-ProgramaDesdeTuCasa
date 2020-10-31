@@ -1,0 +1,9 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url(../image/back2.jpg) no-repeat, fixed;
+    background-size: 80rem;
+}
