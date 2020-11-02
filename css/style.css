@@ -33,3 +33,11 @@
     padding: 1rem 1rem 1rem 1rem;
 }
 
+/* este elemento se agrega en el script mostrarProductos  */
+.eliminarItem{
+    margin-left: 1.5rem;
+}
+
+.eliminarItem:hover{
+    background-color: red;
+}

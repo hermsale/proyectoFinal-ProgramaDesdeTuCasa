@@ -3,22 +3,30 @@
 
 
 let productoArray = [];
-
+let contador = 0;
 
 // con esta funcion guardamos los datos ingresados 
 function guardarDatos(productoName,cantidadProducto,precioProducto){
 
+      // toma los datos de producto y los guarda en existentes
+      let existentes = JSON.parse(localStorage.getItem("producto"));
+
+    // if(existentes!==null){
+    //     contador = existentes.numeroArticulo;
+    // }else{
+    //     contador = 0;
+    // }
+    
+
+
     // creo un array de producto 
     const producto ={
+        numeroArticulo: contador++,
         nombreProducto: productoName,
         cantidad: cantidadProducto,
         precio: precioProducto
     }
-
-
-    // toma los datos de producto y los guarda en existentes
-    let existentes = JSON.parse(localStorage.getItem("producto"));
-    
+   
    
     // si existente tiene datos le pushea lo que hay en producto 
     if(existentes!==null){
@@ -59,7 +67,8 @@ let precioItem = document.querySelector("#precioItem");
 
 
 function tomarDatos(){
-    let productoName = productoItem.value;
+    // normalizo todos los nombres para que se ingresen en minusculas 
+    let productoName = productoItem.value.toLowerCase();
     let cantidadProducto = cantidadItem.value;
     let precioProducto = precioItem.value;
 
@@ -100,3 +109,4 @@ function revisionStock(){
 
     // console.log(revision.nombreProducto.every(inventario));   
 }
+
