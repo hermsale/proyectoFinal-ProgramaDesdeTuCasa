@@ -33,6 +33,12 @@
     padding: 1rem 1rem 1rem 1rem;
 }
 
+#contenedorBorrar{
+   width: 50%;
+   margin: 0 auto;
+   text-align: center;
+}
+
 /* este elemento se agrega en el script mostrarProductos  */
 .eliminarItem{
     margin-left: 1.5rem;

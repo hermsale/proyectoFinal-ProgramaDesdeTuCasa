@@ -38,10 +38,7 @@ function guardarDatos(productoName,cantidadProducto,precioProducto){
 
 }
 
-// borra un producto 
-function borrarProducto(){
-    localStorage.removeItem('producto');
-}
+
 
 
 // limpiar formulario de ingreso

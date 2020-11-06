@@ -3,22 +3,35 @@
 // MOSTRAR PRODUCTO 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// cuando se carga la pagina muestra los productos 
 window.addEventListener("load",()=>{
         mostrarProductos();
 });
 
-let btn_mostrarProducto = document.querySelector("#btn_mostrarProducto");
+let btn_borrarTodo = document.querySelector("#btn_borrarTodo");
 let span_mostrarProducto = document.querySelector("#span_mostrarProducto");
 let span_mostrarCantidad = document.querySelector("#span_cantidadProducto");
 let span_precioProducto = document.querySelector("#span_precioProducto");
 
 
-btn_mostrarProducto.addEventListener("click",mostrarProductos);
+btn_borrarTodo.addEventListener("click",borrarProducto);
+
+// borra un producto 
+function borrarProducto(){
+    localStorage.removeItem('producto');
+    // refresca la pagina 
+    location.reload()
+}
+
+
 
 function mostrarProductos(){
 
     // console.log("entre");
     let productosCargados = JSON.parse(localStorage.getItem("producto"));
+    // if(productosCargados===null){
+    //     display:none;
+    // }
 
      // muestro todos los nombres de los productos cargados 
     for (const index in productosCargados){
@@ -37,6 +50,8 @@ function mostrarProductos(){
 
 }   
 
+///////////////////////////////////////////////////////////////////////
+
 // NOTAS: Revisar metodo indexOf y splice para eliminar items
 // el metodo indexOf devuelve el indice del array de donde se encuentre la coincidencia.
 // //El método splice() cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos elementos.
@@ -44,14 +59,14 @@ function mostrarProductos(){
 // months.splice(2,1);
 // de esta forma splice borraria el indice 2, 1 solo elemento
 
+
+
 // NOTA: Funcion a desarrollar
 // funcion para buscar la posicion del item a eliminar
 
 function eliminar(){
     let eliminarItem = document.querySelector(".eliminarItem");
-
     eliminarItem.addEventListener("click",buscador());
-   
 }
 
 function buscador(){
