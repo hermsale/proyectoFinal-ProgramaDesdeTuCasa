@@ -41,3 +41,48 @@
 .eliminarItem:hover{
     background-color: red;
 }
+
+
+/* //////////////////////////////////////  carga productos  */
+.nav-bar a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    font-family:'Syne Tactile', cursive; 
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    color:white;
+    background-color: black;
+    font-size: 40px;
+
+    /* border: 2px red solid; */
+}
+
+.nav-bar a:hover{
+    color: red;
+}
+
+#containerItems{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+#containerItems .item{
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 5rem 5rem 5rem 5rem;
+}
+
+/* ///////////////////////////// mostrar productos  */
+
+#contenedorMostrar{
+    background-color: white;
+    width: 50%;
+    margin:  0 auto;
+    border-radius: 1rem 1rem 1rem 1rem;
+}
+

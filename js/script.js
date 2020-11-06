@@ -1,6 +1,6 @@
+
 /// local storage ////
 // stock de restaurant 
-
 
 let productoArray = [];
 let contador = 0;
@@ -11,17 +11,9 @@ function guardarDatos(productoName,cantidadProducto,precioProducto){
       // toma los datos de producto y los guarda en existentes
       let existentes = JSON.parse(localStorage.getItem("producto"));
 
-    // if(existentes!==null){
-    //     contador = existentes.numeroArticulo;
-    // }else{
-    //     contador = 0;
-    // }
-    
-
-
     // creo un array de producto 
     const producto ={
-        numeroArticulo: contador++,
+        // numeroArticulo: contador++,
         nombreProducto: productoName,
         cantidad: cantidadProducto,
         precio: precioProducto
@@ -81,10 +73,18 @@ btn_guardar.addEventListener("click",revisionStock);
 
 // esta funcion es un filtro para no generar productos repetidos en el inventario 
 function revisionStock(){
+
+    // corroboro que los campos de carga esten completos 
+    if((productoItem.value==='') || (cantidadItem.value==='') || (precioItem.value==='')){
+
+        return alert("Debe ingresar los campos solicitados");
+    }
+
     let revision = JSON.parse(localStorage.getItem("producto"));
     
     // comparo si ya existe el producto o no en el inventario almacenado 
     let contador=0;
+
     for (const i in revision) {
         if(productoItem.value===revision[i].nombreProducto){
             alert("El producto que esta deseando ingresar ya se encuentra en el inventario");

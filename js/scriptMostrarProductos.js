@@ -3,6 +3,10 @@
 // MOSTRAR PRODUCTO 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+window.addEventListener("load",()=>{
+        mostrarProductos();
+});
+
 let btn_mostrarProducto = document.querySelector("#btn_mostrarProducto");
 let span_mostrarProducto = document.querySelector("#span_mostrarProducto");
 let span_mostrarCantidad = document.querySelector("#span_cantidadProducto");
