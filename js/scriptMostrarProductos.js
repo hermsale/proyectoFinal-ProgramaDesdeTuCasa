@@ -18,9 +18,10 @@ btn_borrarTodo.addEventListener("click",borrarProducto);
 
 // borra un producto 
 function borrarProducto(){
-    localStorage.removeItem('producto');
-    // refresca la pagina 
-    location.reload()
+    let decision = confirm("Seguro que desea borrar todo?");
+        if(decision==true)localStorage.removeItem('producto');   
+        location.reload();// refresca la pagina 
+    
 }
 
 
