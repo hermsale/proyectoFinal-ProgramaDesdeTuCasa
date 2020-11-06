@@ -22,9 +22,9 @@ function mostrarProductos(){
 
      // muestro todos los nombres de los productos cargados 
     for (const index in productosCargados){
-        span_mostrarProducto.innerHTML += `<br><span>${productosCargados[index].nombreProducto}</span>`;
-        span_mostrarCantidad.innerHTML += `<br><span>${productosCargados[index].cantidad}</span>`;
-        span_precioProducto.innerHTML += `<br><span>${productosCargados[index].precio}</span> <button class="eliminarItem"> eliminar </button>`;            
+        span_mostrarProducto.innerHTML += `<br><span class="itemProducto">${productosCargados[index].nombreProducto}</span>`;
+        span_mostrarCantidad.innerHTML += `<br><span class="itemProducto">${productosCargados[index].cantidad}</span>`;
+        span_precioProducto.innerHTML += `<br><span class="itemProducto">${productosCargados[index].precio}</span> <button class="eliminarItem"> eliminar </button>`;            
     }
 
     // productosCargados.forEach(index => {
