@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,900');
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family:'Raleway', sans-serif;
+    background: crimson;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: url(imagenes/Background\ loading.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+/*LOADING*/
+
+.wavy{
+    position: relative;
+    -webkit-box-reflect: below -12px linear-gradient(transparent,rgb(0,0,0,0.2));
+    text-align: center;
+    padding-top: 380px;
+}
+.wavy span{
+    position: relative;
+    display:inline-block;
+    color:#fff;
+    font-size: 2em;
+    text-transform: uppercase;
+    animation: animate 1s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animate
+{
+    0%
+    {
+        transform:translateY(0px);
+    }
+    20%
+    {
+        transform:translateY(-20px);
+    }
+    40%,100%
+    {
+        transform:translateY(0px);
+    }
+}    
+/*CONTAINER*/
+/*MENU*/
+
+.nav{
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+    position: relative;
+    z-index: 999;
+}
+.menu{
+    margin: 0 30px 0 0 ;
+}
+.menu a{
+    clear: right;
+    text-decoration: none;
+    color: black;
+    margin: 0 10px;
+    line-height: 70px;
+    letter-spacing: .9px;
+    text-transform: uppercase;
+    transition: all 1s ease;
+ 
+}
+.menu h5{
+    margin: 0 30px;
+    text-transform: uppercase;
+    float:left;
+    font-weight: 300;
+    font-size: 25px;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 999;
+    color:black
+}
+@keyframes naveo{
+    0% {width: 0; }
+    100% {width: 100%; }
+}
+/*Presentacion*/
+h3{
+    text-align: center;
+    font-weight: 50;
+    font-size: 20px;
+}
+/* Lenguajes aprendidos */
+#idiomas {
+    border: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border: solid black;
+}
+.languages img{
+    max-width: 50px;
+    max-height: 200px;
+}
+
+/*Informacion conocimientos*/
+h4{
+    text-align: center;
+    font-weight: 50;
+    font-size: 20px;
+    text-decoration:underline black;
+}
+.row{
+    text-align: center;
+}
+.row img{
+    max-width: 100px;
+    max-height: 200px;
+    border: solid black;
+    border-radius: 50%;
+}
+/*Trabajos realizados*/
+.trabajos-realizados p{
+    text-align: center;
+}
+
+/*CONTACTO*/
+.form{
+    border: 0;
+    display: flex;
+    align-items: stretch;
+    flex-flow: column wrap;
+    border: solid black;
+}
+/*label {
+color: #B4886B;
+font-weight: bold;
+display: block;
+width: 150px;
+float: left;
+}*/
+/*FOOTER*/
+.footer-contacto p{
+    font-size: 30px;
+    font-weight: 40px;
+    text-align: center;
+}
+.redes{
+    font-size: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

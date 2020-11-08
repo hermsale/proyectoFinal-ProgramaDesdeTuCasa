@@ -1,0 +1,82 @@
+body{
+    font-family: 'Source Code Pro', monospace;
+    background-color: black;
+    margin: 0 auto;
+    padding: 0 auto;
+    
+}
+/* CUERPO */
+.nav-bar{
+    display: flex;
+    font-family:'Syne Tactile', cursive; 
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    color:white;
+    background-color: black;
+    font-size: 40px;
+}
+.nav-bar img{
+    max-width: 300px;
+}
+
+.nav-bar p{
+    text-decoration: underline white;
+}
+/*MENU*/
+h1{
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+    text-decoration: underline white;
+}
+/*COMIDA*/
+.comida{
+    display: table-column;
+}
+.column {
+    color: white;
+}
+
+
+
+
+@media (max-width: 900px){
+    .container{
+        margin: 0;
+        padding: 10px;
+        width: 100%;
+    }
+    .column{
+        width:100%;
+        display: block;
+        margin: 10px 0;
+        border: none;
+        box-shadow: border-box;
+
+    }
+    .row{
+        margin:0;
+
+    }
+}
+
+
+
+
+
+/* .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: black;
+    padding: 10px;
+  }
+  .grid-item {
+    background-color:white;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    height: 100px;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+  } */
