@@ -69,17 +69,22 @@ function mostrarProductos(){
 // NOTA: Funcion a desarrollar
 // funcion para buscar la posicion del item a eliminar
 
-function eliminar(){
-    let eliminarItem = document.querySelector(".eliminarItem");
-    eliminarItem.addEventListener("click",buscador());
-}
+// let eliminarItem = document.querySelector(".eliminarItem");
+// eliminarItem.addEventListener("click",function(){
+    
+// }
+
+// function eliminar(){
+//     // let eliminarItem = document.querySelector(".eliminarItem");
+//     eliminarItem.addEventListener("click",buscador());
+// }
 
 function buscador(){
     // let pos;
 
 
     let buscar = JSON.parse(localStorage.getItem("producto"));
-    let nombreBusqueda = "huevos";
+    let nombreBusqueda = "manteca";
     for (const i in buscar) {
     //    pos = console.log(buscar[i].nombreProducto.indexOf(nombreBusqueda));
     //     console.log(pos)
@@ -89,6 +94,7 @@ function buscador(){
        
         if(buscar[i].nombreProducto.indexOf(nombreBusqueda)===0){
             console.log("lo encontre "+i);
+            // localStorage.removeItem('producto','0');
         }
     }
 
