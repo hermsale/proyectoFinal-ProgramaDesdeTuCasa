@@ -96,3 +96,9 @@
     margin: 1rem;
     padding-top: 1rem;
 }
+
+
+/* estilo que borra el boton y el contenedor del boton cuando no hay nada para borrar en el listado  */
+.borrar{
+    display: none;
+}

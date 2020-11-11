@@ -12,16 +12,17 @@ let btn_borrarTodo = document.querySelector("#btn_borrarTodo");
 let span_mostrarProducto = document.querySelector("#span_mostrarProducto");
 let span_mostrarCantidad = document.querySelector("#span_cantidadProducto");
 let span_precioProducto = document.querySelector("#span_precioProducto");
+let contenedor_borrar = document.querySelector("#contenedorBorrar");
 
 
 btn_borrarTodo.addEventListener("click",borrarProducto);
+
 
 // borra un producto 
 function borrarProducto(){
     let decision = confirm("Seguro que desea borrar todo?");
         if(decision==true)localStorage.removeItem('producto');   
         location.reload();// refresca la pagina 
-    
 }
 
 
@@ -30,9 +31,12 @@ function mostrarProductos(){
 
     // console.log("entre");
     let productosCargados = JSON.parse(localStorage.getItem("producto"));
-    // if(productosCargados===null){
-    //     display:none;
-    // }
+
+    // se fija si hay algo para mostrar, si no hay nada para mostrar oculta el boton y el contenedor de borrar todo 
+    if(productosCargados===null){
+        btn_borrarTodo.classList.toggle("borrar");
+        contenedor_borrar.classList.toggle("borrar");
+    }
 
      // muestro todos los nombres de los productos cargados 
     for (const index in productosCargados){
