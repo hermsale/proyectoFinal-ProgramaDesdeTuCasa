@@ -1,9 +1,98 @@
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-body{
-    background: url(../image/back2.jpg) no-repeat, fixed;
-    background-size: 80rem;
+#contenedorMostrar{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+}
+
+#span_mostrarProducto{
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+#span_cantidadProducto{
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+#span_precioProducto{
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.div_lista{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+#contenedorBorrar{
+   width: 50%;
+   margin: 0 auto;
+   text-align: center;
+}
+
+/* este elemento se agrega en el script mostrarProductos  */
+.eliminarItem{
+    margin-left: 1.5rem;
+}
+
+.eliminarItem:hover{
+    background-color: red;
+}
+
+
+/* //////////////////////////////////////  carga productos  */
+.nav-bar a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    font-family:'Syne Tactile', cursive; 
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    color:white;
+    background-color: black;
+    font-size: 40px;
+
+    /* border: 2px red solid; */
+}
+
+.nav-bar a:hover{
+    color: red;
+}
+
+#containerItems{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+#containerItems .item{
+    padding: 1rem 1rem 1rem 1rem;
+    border-radius: 5rem 5rem 5rem 5rem;
+}
+
+/* ///////////////////////////// mostrar productos  */
+
+#contenedorMostrar{
+    background-color: white;
+    width: 50%;
+    margin:  0 auto;
+    border-radius: 1rem 1rem 1rem 1rem;
+}
+
+.itemProducto{
+    margin: 1rem;
+    padding-top: 1rem;
 }
