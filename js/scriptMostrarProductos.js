@@ -78,6 +78,10 @@ function mostrarProductos(){
 //     // let eliminarItem = document.querySelector(".eliminarItem");
 //     eliminarItem.addEventListener("click",buscador());
 // }
+// arrayBI.splice(i,1);
+//                 //COMO PRUEBA, subo arrayBI como "pruebaListadoProductos". Si arranca, luego intentar subirlo reemplazando la array original "listadoDeProductos";
+//                 localStorage.setItem("listadoDeProductos", JSON.stringify(arrayBI));
+//             }
 
 function buscador(){
     // let pos;
@@ -95,6 +99,11 @@ function buscador(){
         if(buscar[i].nombreProducto.indexOf(nombreBusqueda)===0){
             console.log("lo encontre "+i);
             // localStorage.removeItem('producto','0');
+
+            buscar.splice(i,1);
+            localStorage.setItem('producto',JSON.stringify(buscar));
+            location.reload();
+            // localStorage.setItem()
         }
     }
 
