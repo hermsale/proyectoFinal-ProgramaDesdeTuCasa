@@ -42,7 +42,7 @@ function mostrarProductos(){
     for (const index in productosCargados){
         span_mostrarProducto.innerHTML += `<br><span class="itemProducto">${productosCargados[index].nombreProducto}</span>`;
         span_mostrarCantidad.innerHTML += `<br><span class="itemProducto">${productosCargados[index].cantidad}</span>`;
-        span_precioProducto.innerHTML += `<br><span class="itemProducto">${productosCargados[index].precio}</span> <button class="eliminarItem"> eliminar </button>`;            
+        span_precioProducto.innerHTML += `<br><span class="itemProducto">${productosCargados[index].precio}</span> <button id="btn_borrarItem" class="eliminarItem"> eliminar </button>`;            
     }
 
     // productosCargados.forEach(index => {
@@ -83,30 +83,40 @@ function mostrarProductos(){
 //                 localStorage.setItem("listadoDeProductos", JSON.stringify(arrayBI));
 //             }
 
-function buscador(){
-    // let pos;
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// eliminarItem = document.querySelectorAll(".eliminarItem");
 
+btn_borrarItem = document.querySelectorAll("#btn_borrarItem");
+
+// btn_borrarItem.addEventListener("click",buscador);
+// btn_borrarTodo.addEventListener("click",borrarProducto);
+
+//     let productosCargados = JSON.parse(localStorage.getItem("producto"));
+//     for (const index in productosCargados){
+//         productosCargados[index].nombreProducto;
+//     }
+// })
+
+btn_borrarItem.addEventListener("click",buscador);
+
+// esta funcion buscador, busca el elemento a eliminar, dependiendo el boton de eliminar qeu se pulse 
+function buscador(){
+  
+    // for(let i = 0; i<eliminarItem.lenght; i++){
+    //     console.log("valores cargados "+eliminarItem[i]);
+    // }    
 
     let buscar = JSON.parse(localStorage.getItem("producto"));
     let nombreBusqueda = "manteca";
     for (const i in buscar) {
-    //    pos = console.log(buscar[i].nombreProducto.indexOf(nombreBusqueda));
-    //     console.log(pos)
-    //    if(pos!==0){
-    //        console.log('se encuentra en '+i);
-    //    }
        
         if(buscar[i].nombreProducto.indexOf(nombreBusqueda)===0){
             console.log("lo encontre "+i);
-            // localStorage.removeItem('producto','0');
 
             buscar.splice(i,1);
             localStorage.setItem('producto',JSON.stringify(buscar));
             location.reload();
-            // localStorage.setItem()
+          
         }
     }
-
-    
-     
 }

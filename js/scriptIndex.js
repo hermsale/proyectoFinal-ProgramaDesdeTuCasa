@@ -53,14 +53,16 @@ function guardarUsuario(usuarioNombre,usuarioPassword){
         usuarioArray.push(usuario);
         localStorage.setItem('usuario',JSON.stringify(usuarioArray));
     }
-
+    // redirecciona al loading  
+    window.location = "loading.html"
     limpiarForm()
-    
+
 }
 
 
 // limpiar formulario de ingreso
 function limpiarForm(){
-    usuarioNombre.value = "";
-    usuarioPassword.value = "";
+    nombre.value = "";
+    contraseña.value = "";
+
 }
