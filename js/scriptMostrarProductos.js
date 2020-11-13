@@ -80,7 +80,7 @@ function buscador(index){
             if(buscar[i].nombreProducto.indexOf(nombreBusqueda)===0){
                 console.log("lo encontre "+i);
     
-                // quita el valor 
+                // quita el valor del array en la posicion i 
                 buscar.splice(i,1);
                 
                 // vuelve a cagar el array nuevo 
@@ -97,12 +97,3 @@ function buscador(index){
             }
         }
     }
-
-
-// function ultimoItemBorrar(){
-//     let ultimoItem = JSON.parse(localStorage.getItem("producto"));
-
-//     console.log(ultimoItem[0].nombreProducto);
-//     // if(ultimoItem.nombreProducto)
-//     // localStorage.removeItem('producto');
-// }
