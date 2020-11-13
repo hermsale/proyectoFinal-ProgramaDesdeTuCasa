@@ -54,19 +54,20 @@ function mostrarProductos(){
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     // eliminar item 
+
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// esta funcion buscador, busca el elemento a eliminar, dependiendo el boton de eliminar qeu se pulse 
-// recibe el parametro de la ubicacion que se pulso 
+// esta funcion buscador, busca el elemento a eliminar, dependiendo el boton de eliminar que se pulse 
+// recibe el parametro de la ubicacion que se pulso (index)
 function buscador(index){
 
     // compruebo el indice que se pulso en la lista 
-    console.log(index);
+    // console.log(index);
 
     // traigo el objeto json 
     let buscar = JSON.parse(localStorage.getItem("producto"));
 
-    // busco el producto por su indice en la lista 
+    // guardo en nombreBusqueda el valor que se aloja en la posicion de buscar[index] 
     let nombreBusqueda = buscar[index].nombreProducto;
 
   
@@ -75,9 +76,9 @@ function buscador(index){
         for (const i in buscar) {
            
             // si encuentra el producto entra en el if 
-    
-            
             if(buscar[i].nombreProducto.indexOf(nombreBusqueda)===0){
+
+                // encuentra la posicion en donde se encuentra el producto a borrar 
                 console.log("lo encontre "+i);
     
                 // quita el valor del array en la posicion i 

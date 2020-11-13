@@ -37,15 +37,15 @@ function guardarDatos(productoName,cantidadProducto,precioProducto){
 
 }
 
-
-
-
+//////////////////////////////////////////////////////////////////////////////////
 // limpiar formulario de ingreso
 function limpiarForm(){
     productoItem.value = "";
     cantidadItem.value = "";
     precioItem.value = "";
 }
+
+///////////////////////////////////////////////////////////////////////////////
 
 let btn_guardar = document.querySelector("#btn_guardar");
 
@@ -66,6 +66,10 @@ function tomarDatos(){
 
 // btn_guardar.addEventListener("click",tomarDatos);
 btn_guardar.addEventListener("click",revisionStock);
+
+
+////////////////////////////////////// revision de stock //////////////////////////////
+
 
 // esta funcion es un filtro para no generar productos repetidos en el inventario 
 function revisionStock(){
@@ -95,14 +99,5 @@ function revisionStock(){
         tomarDatos();
     }
   
-  
-    /////////////// probando si toma el metodo every para buscar coincidencias en el array - sin resultado
-    // function repasoInventario(esta){
-    //     return esta === "manteca";
-    // }
-
-    // const inventario = (valor) => valor === "manteca";
-
-    // console.log(revision.nombreProducto.every(inventario));   
 }
 
