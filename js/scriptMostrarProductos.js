@@ -120,3 +120,38 @@ function buscador(){
         }
     }
 }
+
+
+// codigo profesora 
+
+// function eliminarItem(e){
+//     e.preventDefault();
+//     let productos = localStorage.getItem('productos');
+//     //Parseamos nuestro array de string a un JSON 
+//     let productosObj = JSON.parse(productos)
+
+//     //esto atrapa el click que estamos haciendo en una de las tablas especificas
+//     //lo coloco en consola para que puedan ver que está obteniendo
+//     console.log(e.path[2].cells[0].innerHTML);
+//     //aqui pueden ver la ruta de las propiedades que estoy consultando arriba
+//     // console.log(e);
+//     //Con este for recorre el array que contiene todos los objetos de los productos para luego intentar comparar los datos
+//     //obtenidos en el click, me enfoco en lo unico que es UNICO, osea el id
+//     for(let i =0; i< productosObj.length;i++){
+     
+//         for(let objectProp in productosObj[i]){
+//             // recorro las propiedades de cada uno de los objetos en el array. Para poder comparar el contenido de la fila que capture en el click y saber qué borrar
+//             if(parseInt(e.path[2].cells[0].innerHTML) === productosObj[i][objectProp]){
+//                 // elimino el objeto del array productosObj --> splice elimina en su primer parametro el indec que indicamos y en el segundo parametro la cantidad de datos que queremos eliminar a partir de ese indice
+//                 productosObj.splice(i,1);
+//                 //Volvemos a almacenar la lista en el localStorage, pero con un producto/item menos
+//                 localStorage.setItem('productos', JSON.stringify(productosObj))
+//                //eliminamos la fila del DOM
+//                 e.path[2].innerHTML = "";
+//             }
+//         }
+        
+//     }
+//     // mostramos los productos de vuelta en la tabla
+//     mostrarProductos();
+// }
