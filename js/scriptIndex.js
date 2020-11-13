@@ -50,23 +50,15 @@ function guardarUsuario(usuarioNombre,usuarioPassword){
         contraseñaUsuario: usuarioPassword
     }
 
-    // if(existentes!==null){
-    //     existentes.push(producto);
-    //     // guarda en el localStorage en la key producto lo que hay en existente 
-    //     localStorage.setItem('producto',JSON.stringify(existentes));
-    // }else{
-    //     // si existente esta vacio, se le pushea lo que hay en producto al array 
-    //     productoArray.push(producto);
-    //     // se guarda en el localStorage en la key producto lo que hay en el array 
-    //     localStorage.setItem('producto',JSON.stringify(productoArray));
-    // }
-
+    
+    // si no hay un usuario creado, lo crea
     if(existentes===null){
         usuarioArray.push(usuario);
         localStorage.setItem('usuario',JSON.stringify(usuarioArray));
     }
     
 
+    // compara si lo cargado se corresponde con lo ingresado 
     if((usuarioNombre)===(existentes[0].nombreUsuario)&&(usuarioPassword)===(existentes[0].contraseñaUsuario)){
         window.location = "loading.html";
         limpiarForm();
