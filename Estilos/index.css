@@ -1,0 +1,135 @@
+body{
+    font-family: 'Source Code Pro', monospace;
+    color: black;
+    margin: 0 auto;
+    padding: 0 auto;
+    /* width: 100%; */
+}
+
+.nav-bar{
+    display: flex;
+    font-family:'Syne Tactile', cursive; 
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    color:white;
+    background-color: black;
+    /* font-size: 1px; */
+}
+
+
+.nav-bar img{
+    max-width: 10rem;
+}
+
+
+.formulario{
+    display: inline;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.formulario label,input{
+    transition: ease-in 2s;
+}
+
+.campos{
+    padding: 5rem;
+    height: 7rem;
+    text-align: center;
+    letter-spacing: 4px;
+    border: solid 4px rgb(245, 42, 42);
+    background-color: black;
+    color: white;
+    transition: 2s;
+}
+/* .campos label{
+  padding: 40px;
+} */
+.campos input{
+  background-color:rgb(165, 163, 163); ;
+}
+.campos ::placeholder{
+  text-align: center;
+}
+
+.campos button{
+  margin-top: 2rem;
+  align-self: center;
+  align-content: center;
+  width: 10rem;
+  height: 2rem;
+  font-family:'Syne Tactile', cursive; 
+  background-color: rgb(165, 163, 163);
+  color: rgb(43, 41, 41);
+}
+
+.campos a{
+  font-size: 1rem;
+} 
+
+/* /////////////////////////////////// FOTER ////////////////////////// */
+
+@media (min-width:320px) AND  (max-width:767px){
+    .content{
+        position: relative;
+        margin: 2rem auto;
+        text-align: center;
+        padding: 0 1rem;
+      }
+    
+      
+      footer{
+        position: inherit;
+        background-color: black;
+        color: white;
+      }
+    
+      
+      .main-content{
+        display: flex;
+        flex-direction: column;
+        /* flex-direction: wrap; */
+      }
+    
+}
+
+
+
+    /* TABLETS ///////////////////////////////////////// */
+@media (min-width:768px) AND  (max-width:1200px){
+
+    .content{
+        text-align: center;
+        padding: 0 5rem;
+      }
+
+      footer{
+        /* position: inherit; */
+        background-color: black;
+        color: white;
+      }
+
+
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+   .content p{
+       font-size: 1rem;
+   }
+
+   #msgForm{
+       padding-right: 30%;
+   }
+
+   
+}

@@ -17,9 +17,12 @@ body{
     background-color: black;
     font-size: 40px;
 }
+
 .nav-bar img{
     max-width: 300px;
 }
+
+
 /*VIDEOSCREEN*/
     .banner{
         width: 100%;
@@ -56,7 +59,7 @@ body{
     .banner .content p{
         margin: 0;
         padding:0;
-        font-size: 20px;
+        font-size: 1rem;
         text-transform: uppercase;
         color:#fff;
     }
@@ -74,8 +77,8 @@ body{
     transition: ease-in 2s;
 }
 .campos{
-    padding: 200px;
-    height: 200px;
+    padding: 10rem;
+    height: 5rem;
     text-align: center;
     letter-spacing: 4px;
     border: solid 4px rgb(245, 42, 42);
@@ -93,11 +96,11 @@ body{
   text-align: center;
 }
 .campos button{
-  margin-top: 20px;
+  margin-top: 2rem;
   align-self: center;
   align-content: center;
-  width: 400px;
-  height: 50px;
+  width: 10rem;
+  height: 2rempx;
   font-family:'Syne Tactile', cursive; 
   background-color: rgb(165, 163, 163);
   color: rgb(43, 41, 41);
@@ -262,6 +265,9 @@ body{
   .bottom center a:hover{
     text-decoration: underline;
   }
+
+
+  
   @media screen and (max-width: 900px) {
     footer{
       position: relative;
